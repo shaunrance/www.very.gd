@@ -1,0 +1,70 @@
+<div class="modal-billing">
+    <div class="modal-overlay-header">
+        <h1 class="modal-overlay-header__title">Pricing</h1>
+        <p class="modal-overlay-header__desc">No credit card required to sign up. Start your 30-day free trial today.</p>
+        <p ng-show="{{isBasic}}" class="modal-overlay-header__desc">Upgrade now to lock in our exclusive Beta pricing for 12 months.</p>
+    </div>
+    <div class="modal--payment-options">
+        <div class="modal--payment-options-inner">
+            <a
+                class="modal-overlay-options-billing modal-overlay-options-billing--monthly"
+                ng-class="{'active': selectedPlan === 'beta_monthly'}"
+                ng-click="monthlyPlan();">
+                Monthly Billing
+            </a>
+            <a
+                class="modal-overlay-options-billing modal-overlay-options-billing--annual"
+                ng-class="{'active': selectedPlan === 'beta_yearly'}"
+                ng-click="annualPlan();">
+                Annual Billing
+            </a>
+        </div>
+        <div class="modal--payment-tooltip">Save 30%</div>
+    </div>
+    <div class="modal--payment-pricing" ng-hide="paymentShowing">
+        <div class="modal--payment-module">
+            <div class="modal--payment-module-header">
+                <h1>Free</h2>
+            </div>
+            <div class="modal--payment-module-price-wrap">
+                <h1><span>$</span>0</h1>
+                <p>Per Month</p>
+            </div>
+            <ul class="modal--payment-module-features">
+                <li>Unlimited Public Projects</li>
+                <li>1 Private Project</li>
+                <li>100 MB Limit</li>
+            </ul>
+            <a href="https://app.very.gd"><button class="modal--payment-module-button modal-button modal-accept">Sign Up Now</button></a>
+        </div>
+        <div class="modal--payment-module featured">
+            <div class="modal--payment-module-header">
+                <h1>Beta Pricing</h2>
+            </div>
+            <div class="modal--payment-module-price-wrap">
+                <h1><span>$</span>{{price}}</h1>
+                <p>Per Month</p>
+            </div>
+            <ul class="modal--payment-module-features">
+                <li>Unlimited Public Projects</li>
+                <li>Unlimited Private Projects</li>
+                <li>5 GB Limit</li>
+            </ul>
+            <a href="https://app.very.gd"><button class="modal--payment-module-button modal-button modal-accept">Sign Up Now</button></a>
+        </div>
+    </div>
+    <div class="billing-custom-plan">
+        <p>If you're in need of custom enterprise pricing we'll be happy to tailor a plan that meets your specific needs</p>
+        <a href="https://verygd.zendesk.com/hc/en-us/requests/new" class="btn btn-outline-blue">Contact Us</a>
+    </div>
+    <div class="billing-partners">
+        <p>You're in very good company</p>
+        <ul>
+            <li><img src="/img/logo-72.png"></li>
+            <li><img src="/img/logo-amazon.png"></li>
+            <li><img src="/img/logo-TBWA.png"></li>
+            <li><img src="/img/logo-within.png"></li>
+            <li><img src="/img/logo-vrscout.png"></li>
+        </ul>
+    </div>
+</div>

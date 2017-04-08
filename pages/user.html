@@ -1,0 +1,106 @@
+<div class="container user-project-container">
+    <!--<a href="/gallery" class="return-to-gallery"><i class="fa fa-arrow-left" aria-hidden="true"></i> return to gallery</a>-->
+    <div class="user-details text-center">
+        <img src="/img/user-type-creative@2x.png">
+        <h1>User Name</h1>
+        <h4>8 Projects</h4>
+        <p class="user-link">
+            <a href="#" target="_blank">
+                <i class="fa fa-link" aria-hidden="true"></i> www.username.com
+            </a>
+        </p>
+    </div>
+    <div class="gallery clearfix">
+        <!--<div class="loader"></div>-->
+        <div class="project-tile project-tile-lg">
+            <a href="/project/52">
+                <div 
+                    class="project-tile-image" 
+                    style="background-image:url(https://verygd.imgix.net/images/tumblr_o8xbi1f1w91qa8vdgo1_500_sgUDyYq.jpg??fm=jpg&w=620&h=360&fit=crop&q=90)">
+                    <div class="transparent-overlay"></div>
+                    <button class="btn btn-outline-white">View Project</button>
+                </div>
+            </a>
+            <div class="project-tile-caption">
+                <p class="project-tile-name">
+                    <a href="/project/{{project.id}}">project.name</a>
+                </p>
+                <p class="project-tile-user">
+                    <a href="/user/{{project.created_by.id}}"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;project.created_by.name</a>
+                </p>
+            </div>        
+        </div>
+        <div class="project-tile project-tile-lg">
+            <a href="/project/52">
+                <div 
+                    class="project-tile-image" 
+                    style="background-image:url(https://verygd.imgix.net/images/tumblr_o8xbi1f1w91qa8vdgo1_500_sgUDyYq.jpg??fm=jpg&w=620&h=360&fit=crop&q=90)">
+                    <div class="transparent-overlay"></div>
+                    <button class="btn btn-outline-white">View Project</button>
+                </div>
+            </a>
+            <div class="project-tile-caption">
+                <p class="project-tile-name">
+                    <a href="/project/{{project.id}}">project.name</a>
+                </p>
+                <p class="project-tile-user">
+                    <a href="/user/{{project.created_by.id}}"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;project.created_by.name</a>
+                </p>
+            </div>        
+        </div>
+        <div class="project-tile project-tile-lg">
+            <a href="/project/52">
+                <div 
+                    class="project-tile-image" 
+                    style="background-image:url(https://verygd.imgix.net/images/tumblr_o8xbi1f1w91qa8vdgo1_500_sgUDyYq.jpg??fm=jpg&w=620&h=360&fit=crop&q=90)">
+                    <div class="transparent-overlay"></div>
+                    <button class="btn btn-outline-white">View Project</button>
+                </div>
+            </a>
+            <div class="project-tile-caption">
+                <p class="project-tile-name">
+                    <a href="/project/{{project.id}}">project.name</a>
+                </p>
+                <p class="project-tile-user">
+                    <a href="/user/{{project.created_by.id}}"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;project.created_by.name</a>
+                </p>
+            </div>        
+        </div>
+        <div class="project-tile project-tile-lg">
+            <a href="/project/52">
+                <div 
+                    class="project-tile-image" 
+                    style="background-image:url(https://verygd.imgix.net/images/tumblr_o8xbi1f1w91qa8vdgo1_500_sgUDyYq.jpg??fm=jpg&w=620&h=360&fit=crop&q=90)">
+                    <div class="transparent-overlay"></div>
+                    <button class="btn btn-outline-white">View Project</button>
+                </div>
+            </a>
+            <div class="project-tile-caption">
+                <p class="project-tile-name">
+                    <a href="/project/{{project.id}}">project.name</a>
+                </p>
+                <p class="project-tile-user">
+                    <a href="/user/{{project.created_by.id}}"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;project.created_by.name</a>
+                </p>
+            </div>        
+        </div>
+
+        <!--
+        <div ng-repeat="project in projects | limitTo:quantity" class="project-tile">
+            <div 
+                class="project-tile-image" 
+                style="background-image:url({{project.content[0].content[0].url + '?fm=jpg&w=240&h=180&fit=crop&q=90'}})">
+                <button class="btn btn-outline-white vr_viewer" data-url="https://app.very.gd/p/{{project.short_uuid}}/{{project.content[0].id}}">View Project</button>
+            </div>
+            <div class="project-tile-caption">
+                <p class="project-tile-name">
+                    <a href="/project/{{project.id}}">{{project.name}}</a>
+                </p>
+                <p class="project-tile-user">
+                    <a href="/user/{{project.created_by.id}}"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;{{project.created_by.name}}</a>
+                </p>
+            </div>        
+        </div>
+        -->
+    </div>
+</div>

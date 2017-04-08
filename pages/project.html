@@ -1,0 +1,44 @@
+<div class="container public-project-container">
+    <!--<a href="/gallery" class="return-to-gallery"><i class="fa fa-arrow-left" aria-hidden="true"></i> return to gallery</a>-->
+    <div class="project-details text-center">
+        <p class="author-link">
+            <!--<a href="/user/{{currentProject.created_by.id}}">-->
+                <i class="fa fa-circle" aria-hidden="true"></i> {{currentProject.created_by.name}}
+            <!--</a>-->
+        </p>
+        <h1>{{currentProject.name}}</h1>
+        <h4>{{numScenes}}</h4>
+        <p class="project-link">
+            <a href="https://app.very.gd/p/{{currentProject.short_uuid}}/{{currentProject.content[0].id}}">
+                <i class="fa fa-link" aria-hidden="true"></i> app.very.gd/p/{{currentProject.short_uuid}}/{{currentProject.content[0].id}}
+            </a>
+        </p>
+        <p class="description">{{currentProject.description}}</p>
+        <!--<button data-url="https://app.very.gd/p/{{currentProject.short_uuid}}/{{currentProject.content[0].id}}" target="_blank" class="btn-outline btn-outline-pink vr_viewer">Launch Project</button>-->
+        <a href="https://app.very.gd/p/{{currentProject.short_uuid}}/{{currentProject.content[0].id}}" class="btn-outline btn-outline-pink vr_viewer">Launch Project</a>
+    </div>
+    
+    <div class="scene-list-holder">
+        <i class="fa fa-list toggle-scene" aria-hidden="true"></i>
+        <ul class="scene-list">
+            <li ng-class="{ active: isSet( {{scene.id}} ) }" ng-repeat="scene in currentProject.content">
+                <img class="scene-type-icon" src="/img/scene-{{scene.scene_type}}.png">
+                <a href ng-click="setTab(scene.id)">{{scene.title}}</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="scene-viewer clearfix">
+        <div class="scene-container" ng-show="isSet( {{scene.id}} )" ng-repeat="scene in currentProject.content">
+            <ul>
+                <li ng-repeat="panel in scene.content">
+                    <div class="panel-container">
+                        <div class="panel-image" style="background-image:url({{panel.url + '?fm=jpg&w=240&h=180&fit=crop&q=90'}})"></div>
+                        <!--<div class="panel-title">{{panel.title}}</div>-->
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>

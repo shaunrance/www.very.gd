@@ -1,0 +1,35 @@
+<div class="container curated-gallery-container">
+
+    <h1>Gallery</h1>
+    <h3>{{message}}</h3>
+
+    <div class="gallery clearfix">
+
+        <div class="loader"></div>
+
+        <div ng-repeat="project in featuredProjects | limitTo:quantity" class="project-tile">
+            <a href="/project/{{project.id}}">
+                <div 
+                    class="project-tile-image" 
+                    style="background-image:url({{project.content[0].content[0].url + '?fm=jpg&w=240&h=180&fit=crop&q=90'}})">
+                    <div class="transparent-overlay"></div>
+                    <button class="btn btn-outline-white">View Project</button>
+                </div>
+            </a>
+            <div class="project-tile-caption">
+                <p class="project-tile-name">
+                    <a href="/project/{{project.id}}">{{project.name}}</a>
+                </p>
+                <p class="project-tile-user">
+                    <!--<a href="/user/{{project.created_by.id}}">--><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;{{project.created_by.name}}<!--</a>-->
+                </p>
+            </div>        
+        </div>
+
+    </div>
+
+    <div class="gallery-continue">
+        <a href="public-gallery" class="btn btn-outline-blue">View All</a>
+    </div>
+
+</div>
